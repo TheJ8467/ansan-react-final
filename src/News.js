@@ -15,9 +15,7 @@ function News() {
 
   async function fetchData() {
     try {
-      const response = await fetch(
-        ` https://ce7f0ee9e0f9.ngrok.app/all`
-      );
+      const response = await fetch(" https://ce7f0ee9e0f9.ngrok.app/all");
       const data = await response.json();
       setData((prevData) => [...prevData, ...data.news]);
     } catch (error) {
@@ -25,8 +23,7 @@ function News() {
     }
   }
 
-  const proxyUrl =
-    " https://ce7f0ee9e0f9.ngrok.app/image-proxy?url=";
+  const proxyUrl = " https://ce7f0ee9e0f9.ngrok.app/image-proxy?url=";
 
   const [visibleCards, setVisibleCards] = useState(2);
 
